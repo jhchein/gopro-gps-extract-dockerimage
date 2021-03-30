@@ -38,13 +38,13 @@ If you run Windows and added the secrets to your environment, you might want to 
 
 ### Check the output
 
-The videos will be uploaded to ```inputvideos/yyyy/MM/DD/filename.mp4``` while GPS files will go to ```gpsdata/yyyy/MM/DD/filename.json```
+The videos will be uploaded to ```inputvideos/yyyy/MM/DD/filename.mp4``` while GPS files will go to ```gpsdata/yyyy/MM/DD/filename.json``` (with ```yyyy/MM/DD``` being the recoding date of the video).
 
 ## Acknowledgement
 
-For extracting GPS information from GoPro Video, I thankfully rely on Juan Irache's [gpmf-extract](https://github.com/JuanIrache/gpmf-extract/blob/master/LICENSE) and [gopro-telemetry](https://github.com/JuanIrache/gopro-telemetry/blob/master/LICENSE.txt) (both under MIT license).
+For extracting GPS information from a GoPro Video, I thankfully rely on Juan Irache's [gpmf-extract](https://github.com/JuanIrache/gpmf-extract/blob/master/LICENSE) and [gopro-telemetry](https://github.com/JuanIrache/gopro-telemetry/blob/master/LICENSE.txt) (both under MIT license).
 
 ## Troubleshooting / known issues
 
-* The extraction will freeze when storage account does not exist.
+* The extraction will freeze when the storage account does not exist.
 
