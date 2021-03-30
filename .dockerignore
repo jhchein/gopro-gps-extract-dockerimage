@@ -1,0 +1,8 @@
+*.avi
+*.exe
+*.mp4
+*.ipynb
+*.bat
+.ipynb_checkpoints
+.vscode
+deprecated

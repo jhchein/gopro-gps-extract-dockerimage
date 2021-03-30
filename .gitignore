@@ -1,0 +1,11 @@
+# gpmf-extract
+# gopro-telemetry
+node_modules
+.vscode
+.ipynb_checkpoints
+explore.ipynb
+.ipynb
+deprecated
+*.exe
+*.mp4
+*.json
