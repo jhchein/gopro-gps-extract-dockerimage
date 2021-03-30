@@ -4,7 +4,7 @@ The repository creates a Docker image to extract GPS data from GoPro mp4 files s
 
 It is part of a larger Microsoft Azure-based project to extract GPS data from GoPro Video files, applies some Machine Learning Models, creates a video overlay with metrics (such as speed, heart rate) and encodes the video in h264 for further processing.
 
-Feel free to take, replace, and/or remove parts of this code for your own purpose, if you do not want to use (some of the) Azure Services or Docker.
+The code is not production ready in any form. Please use at your own responsibility. Feel free to take, replace, and/or remove parts of this code for your own purpose, if you do not want to use (some of the) Azure Services or Docker.
 
 ## Requirements
 
@@ -41,7 +41,7 @@ If you run Windows and added the secrets to your environment, you might want to 
 
 The videos will be uploaded to ```inputvideos/yyyy/MM/DD/filename.mp4``` while GPS files will go to ```gpsdata/yyyy/MM/DD/filename.json``` (with ```yyyy/MM/DD``` being the recoding date of the video).
 
-## Acknowledgement
+## Acknowledgment / Kudos / Credits
 
 For extracting GPS information from a GoPro Video, I thankfully rely on Juan Irache's [gpmf-extract](https://github.com/JuanIrache/gpmf-extract/blob/master/LICENSE) and [gopro-telemetry](https://github.com/JuanIrache/gopro-telemetry/blob/master/LICENSE.txt) (both under MIT license).
 
