@@ -2,7 +2,7 @@
 
 The repository creates a Docker image to extract GPS data from GoPro mp4 files stored in an Azure Blob Storage.
 
-It is part of a larger Microsoft Azure-based project to extract GPS data from GoPro Video files, creates a video overlay with metrics (such as speed, heart rate) and encodes the video in h264 for further processing.
+It is part of a larger Microsoft Azure-based project to extract GPS data from GoPro Video files, applies some Machine Learning Models, creates a video overlay with metrics (such as speed, heart rate) and encodes the video in h264 for further processing.
 
 Feel free to take, replace, and/or remove parts of this code for your own purpose, if you do not want to use (some of the) Azure Services or Docker.
 
