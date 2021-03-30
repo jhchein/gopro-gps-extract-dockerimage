@@ -3,6 +3,7 @@
 *.mp4
 *.ipynb
 *.bat
+*.MD
 .ipynb_checkpoints
 .vscode
 deprecated
