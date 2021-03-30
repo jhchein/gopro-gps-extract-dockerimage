@@ -19,7 +19,6 @@ uploads the videos to another container (with creation date as folder)
 
 # CONFIG
 local_video_filename = "input.mp4"
-blob_account_url = "https://bikevideostorage.blob.core.windows.net"
 
 # Login to Azure
 tenant_id = os.environ.get("goprotenant_id")
@@ -32,27 +31,36 @@ def parse_args():
     # ARG PARSE
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", type=str, default=None)
+    parser.add_argument("--storageaccountname", type=str, default=None)
     args = parser.parse_args()
     assert args.url is not None, "Please provide an 'url' including SAS token."
+    assert (
+        args.storageaccountname is not None
+    ), "Please provide 'storageaccountname' pointing towards your storage"
     return args
 
 
 def main(args):
+    blob_account_url = f"https://{args.storageaccountname}.blob.core.windows.net"
+
     input_blob = BlobClient.from_blob_url(args.url)
     _, filename = os.path.split(input_blob.blob_name)
     root, ext = os.path.splitext(filename)
     print(f"root: {root}")
+
     assert ext.lower() == ".mp4"
 
     gps_output_container = ContainerClient(
         account_url=blob_account_url, container_name="gpsdata", credential=credential
     )
+    assert gps_output_container.exists()
 
     video_upload_container = ContainerClient(
         account_url=blob_account_url,
         container_name="inputvideos",
         credential=credential,
     )
+    assert video_upload_container.exists()
 
     # Download blob into "input.mp4"
     print("Downloading video file")
