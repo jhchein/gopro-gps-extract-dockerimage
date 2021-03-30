@@ -14,8 +14,8 @@ RUN pip3 install ffmpeg-python
 
 # Install gpmf-extract and gopro-telemetry
 RUN git clone https://github.com/JuanIrache/gpmf-extract.git
-RUN git clone https://github.com/JuanIrache/gopro-telemetry.gits
-RUN npm i gpmf-extracts
+RUN git clone https://github.com/JuanIrache/gopro-telemetry.git
+RUN npm i gpmf-extract
 RUN npm i gopro-telemetry
 
 RUN mkdir -p /usr/src/app
