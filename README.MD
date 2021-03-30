@@ -12,6 +12,7 @@ Feel free to take, replace, and/or remove parts of this code for your own purpos
 * An Azure Storage account with two containers: ```gpsdata``` (for GPS data) and ```inputvideos``` (for archiving the video)
 * A Service Principal with at least 'Blob Data Contributor' role assignment to the two containers (you want write access)
 * An Azure Container Registry (to store and provide the image)
+* Azure CLI
 * Docker (for building the image)
 
 ## Steps
